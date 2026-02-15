@@ -52,7 +52,7 @@ body{
   max-height:600px;
   margin:0 auto;
 /*  background:var(--card);*/
-  background-image: url('img/aqua.jpg');
+  background-image: url('img/aqua.gif');
   background-size: cover;
   border-radius:12px;
   box-shadow:0 8px 30px rgba(20,20,30,0.06);

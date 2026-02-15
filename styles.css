@@ -30,8 +30,7 @@ body{
 
 .main{
     padding:28px 28px 28px;
-    background-color:yellow;
-
+    background-color: #FFD700;
    }
 
 /* reduce title/subtitle spacing when sticky to save space */

@@ -3,68 +3,36 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Digital Restaurant Menu</title>
-  <link rel="stylesheet" href="styles.css">
+  <title>Welcome — Choose a Menu</title>
+  <link rel="stylesheet" href="main-styles.css" />
 </head>
 <body>
-  <div class="app" id="app">
-    <div class="main">
-    <div class="top-header">
-      <h1 class="title">Menu</h1>
-      <p class="subtitle">Choose an item and quantity. Then continue to select supplements.</p>
-    </div>
-      <div id="listView">
-        <div class="items" id="itemsList"></div>
-      </div>
+  <div class="hero">
 
-      <div id="supplementView" class="hidden">
-        <div class="supplement">
-          <div style="display:flex;justify-content:space-between;align-items:center">
-            <div>
-              <div style="font-weight:700" id="selItemLabel">Item</div>
-              <div class="small" id="selQtyLabel">Qty</div>
-            </div>
-            <div style="text-align:right">
-              <div class="price" id="selTotalPrice">$0.00</div>
-              <div class="small">Total</div>
-            </div>
-          </div>
+    <div class="hero__overlay">
+      <h1 class="hero__title">Welcome here — Choose a Menu</h1>
 
-          <div style="margin-top:12px">
-            <div class="small">Choose supplements (each optional):</div>
-            <div class="checkbox-list" id="suppList"></div>
-          </div>
-
-          <div style="display:flex;justify-content:space-between;margin-top:16px">
-            <button class="btn secondary no-print " id="backBtn">Back</button>
-            <button class="btn primary  no-print" id="toFinalBtn">Next</button>
-          </div>
-        </div>
-      </div>
-
-      <div id="finalView" class="hidden" style="margin-top:14px">
-        <div class="print-area">
-          <div id="finalContent"></div>
-          <div style="display:flex;gap:8px;margin-top:12px" class="no-print">
-          </div>
-        </div>
+      <div class="menu-grid" role="navigation" aria-label="Main menu">
+        <a class="menu-btn " href="1-index.html" style="background-image: url('img1.jpg');">
+          <span class="menu-btn__label ">مشاوي</span>
+        </a>
+        <a class="menu-btn" href="2-index.html" style="background-image: url('img2.jpg');">
+          <span class="menu-btn__label">سلطات</span>
+        </a>
+        <a class="menu-btn" href="3-index.html" style="background-image: url('img3.jpg');">
+          <span class="menu-btn__label">حساء</span>
+        </a>
+        <a class="menu-btn" href="4-index.html" style="background-image: url('img4.jpg');">
+          <span class="menu-btn__label">بيتزا</span>
+        </a>
+        <a class="menu-btn" href="5-index.html" style="background-image: url('img5.jpg');">
+          <span class="menu-btn__label">ساندويتشات</span>
+        </a>
+        <a class="menu-btn" href="6-index.html" style="background-image: url('img6.jpg');">
+          <span class="menu-btn__label">مشروبات</span>
+        </a>
       </div>
     </div>
-
-    <aside class="sidebar no-print">
-      <div class="summary-title">Current Selection</div>
-      <div class="summary-row"><div class="small">Item</div><div id="sideItem">—</div></div>
-      <div class="summary-row"><div class="small">Quantity</div><div id="sideQty">0</div></div>
-      <div class="summary-row"><div class="small">Supplements</div><div id="sideSupp">—</div></div>
-      <div class="summary-row" style="border-bottom:0"><div class="small">Total</div><div id="sideTotal">$0.00</div></div>
-
-      <div class="actions">
-        <button class="btn secondary" id="resetBtn">Reset</button>
-      </div>
-    </aside>
   </div>
-
-  <script src="app.js">
- </script>
 </body>
 </html>

@@ -1,16 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Digital Restaurant Menu</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="app" id="app">
+    <div class="main">
+    <div class="top-header">
+    <!--  <h1 class="title">Menu</h1> -->
+      <a class="btn primary " href="index.html"> Back To Menu Total</a>
+      <p class="subtitle">Choose an item and quantity. Then continue to select supplements.</p>
+    </div>
+      <div id="listView">
+        <div class="items" id="itemsList"></div>
+      </div>
+
+      <div id="supplementView" class="hidden">
+        <div class="supplement">
+          <div style="display:flex;justify-content:space-between;align-items:center">
+            <div>
+              <div style="font-weight:700" id="selItemLabel">Item</div>
+              <div class="small" id="selQtyLabel">Qty</div>
+            </div>
+            <div style="text-align:right">
+              <div class="price" id="selTotalPrice">$0.00</div>
+              <div class="small">Total</div>
+            </div>
+          </div>
+
+          <div style="margin-top:12px">
+            <div class="small">Choose supplements (each optional):</div>
+            <div class="checkbox-list" id="suppList"></div>
+          </div>
+
+          <div style="display:flex;justify-content:space-between;margin-top:16px">
+            <button class="btn secondary no-print " id="backBtn">Back</button>
+            <button class="btn primary  no-print" id="toFinalBtn">Next</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="finalView" class="hidden" style="margin-top:14px">
+        <div class="print-area">
+          <div id="finalContent"></div>
+          <div style="display:flex;gap:8px;margin-top:12px" class="no-print">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <aside class="sidebar no-print">
+      <div class="summary-title">Current Selection</div>
+      <div class="summary-row"><div class="small">Item</div><div id="sideItem">—</div></div>
+      <div class="summary-row"><div class="small">Quantity</div><div id="sideQty">0</div></div>
+      <div class="summary-row"><div class="small">Supplements</div><div id="sideSupp">—</div></div>
+      <div class="summary-row" style="border-bottom:0"><div class="small">Total</div><div id="sideTotal">$0.00</div></div>
+
+      <div class="actions">
+        <button class="btn secondary" id="resetBtn">Reset</button>
+      </div>
+    </aside>
+  </div>
+
+  <script>
 //(1)
 /* ---------- Data (10 items + images) ---------- */
 const items = [
-  { id:'pizza',   name:'Pizza', price:8.50, img:'img/pizza.jpg' },
-  { id:'burger',  name:'Burger', price:6.75, img:'img/burger.jpg' },
-  { id:'hotdog',  name:'Hotdog', price:4.50, img:'img/hotdog.jpg' },
-  { id:'pasta',   name:'Pasta', price:7.25, img:'img/pasta.jpg' },
-  { id:'salad',   name:'Salad', price:5.00, img:'img/salad.jpg' },
-  { id:'wrap',    name:'Wrap', price:6.00, img:'img/wrap.jpg' },
-  { id:'taco',    name:'Taco', price:3.75, img:'img/taco.jpg' },
-  { id:'fries',   name:'Fries', price:2.50, img:'img/fries.jpg' },
-  { id:'soup',    name:'Soup', price:3.25, img:'img/soup.jpg' },
-  { id:'dessert', name:'Dessert', price:4.00, img:'img/dessert.jpg' }
+  { id:'mach1',   name:'mach1', price:8.50, img:'img/mach1.jpg' },
+  { id:'mach2',  name:'mach2', price:6.75, img:'img/bmach2.jpg' },
+  { id:'mach3',  name:'mach3', price:4.50, img:'img/mach3.jpg' },
+  { id:'mach4',   name:'mach4', price:7.25, img:'img/mach4.jpg' },
+  { id:'mach5',   name:'mach5', price:5.00, img:'img/mach5.jpg' },
+  { id:'mach6',    name:'mach6', price:6.00, img:'img/mach6.jpg' },
+  { id:'mach7',    name:'mach7', price:3.75, img:'img/mach7.jpg' },
+  { id:'mach8',   name:'mach8', price:2.50, img:'img/mach8.jpg' },
+  { id:'mach9',    name:'mach9', price:3.25, img:'img/mach9.jpg' },
+  { id:'mach10', name:'mach10', price:4.00, img:'img/mach10.jpg' }
 ];
 
 const supplements = [
@@ -473,3 +541,6 @@ function refreshSidebar(){
 
 /* initial state update */
 refreshSidebar();
+</script>
+</body>
+</html>
